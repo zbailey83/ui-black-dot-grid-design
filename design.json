@@ -1,0 +1,99 @@
+
+{
+  "meta": {
+    "name": "Gemini Technical Artifacts Theme",
+    "version": "1.0.0",
+    "description": "A technical, futuristic design system emphasizing transparency, fine borders, and precise typography."
+  },
+  "tokens": {
+    "colors": {
+      "background": {
+        "app": "#09090b",
+        "surface": "#18181b",
+        "surface-hover": "#27272a"
+      },
+      "text": {
+        "primary": "#fafafa",
+        "secondary": "#a1a1aa",
+        "muted": "#52525b",
+        "inverted": "#000000"
+      },
+      "border": {
+        "subtle": "#27272a",
+        "default": "#3f3f46",
+        "focus": "#3b82f6"
+      },
+      "accent": {
+        "blue": "#3b82f6",
+        "blue-dim": "rgba(59, 130, 246, 0.1)",
+        "green": "#22c55e",
+        "red": "#ef4444"
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "sans": "Inter, system-ui, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "weights": {
+        "regular": 400,
+        "medium": 500,
+        "bold": 700
+      },
+      "tracking": {
+        "tight": "-0.025em",
+        "wide": "0.025em"
+      }
+    },
+    "effects": {
+      "glass": {
+        "backdrop-filter": "blur(12px)",
+        "background": "rgba(24, 24, 27, 0.5)"
+      },
+      "shadows": {
+        "glow": "0 0 20px rgba(59, 130, 246, 0.1)",
+        "float": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+      }
+    },
+    "animations": {
+      "transition": {
+        "default": "all 0.3s ease-in-out",
+        "slow": "all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1)"
+      },
+      "keyframes": {
+        "spin-slow": "spin 3s linear infinite",
+        "pulse-glow": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite"
+      }
+    }
+  },
+  "components": {
+    "technical-grid": {
+      "css": "background-image: radial-gradient(circle, #3f3f46 1px, transparent 1px); background-size: 40px 40px;",
+      "usage": "Apply to main background wrapper"
+    },
+    "panel": {
+      "tailwind": "bg-zinc-900/30 backdrop-blur-sm border border-dashed border-zinc-700 rounded-xl"
+    },
+    "corner-brackets": {
+      "description": "Absolute positioned divs at corners with partial borders to simulate camera viewfinder or technical schematics."
+    }
+  },
+  "tailwindConfig": {
+    "theme": {
+      "extend": {
+        "colors": {
+          "zinc": {
+            "950": "#09090b"
+          }
+        },
+        "fontFamily": {
+          "sans": ["Inter", "sans-serif"],
+          "mono": ["JetBrains Mono", "monospace"]
+        },
+        "animation": {
+          "spin-slow": "spin 3s linear infinite"
+        }
+      }
+    }
+  }
+}
