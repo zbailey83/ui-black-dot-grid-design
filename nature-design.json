@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "name": "AlphaQubit Research Design System",
+    "version": "1.0.0",
+    "description": "A refined, academic, and elegant design system for presenting scientific breakthroughs.",
+    "inspiration": ["Nature Journal", "Classical Typography", "Modern Minimalist Web"]
+  },
+  "design_tokens": {
+    "colors": {
+      "palette": {
+        "cream": {
+          "50": "#F9F8F4",
+          "100": "#F5F4F0",
+          "200": "#E6E4DC",
+          "description": "Primary background colors simulating high-quality paper."
+        },
+        "stone": {
+          "50": "#FAFAF9",
+          "100": "#F5F5F4",
+          "200": "#E7E5E4",
+          "300": "#D6D3D1",
+          "400": "#A8A29E",
+          "500": "#78716C",
+          "600": "#57534E",
+          "700": "#44403C",
+          "800": "#292524",
+          "900": "#1C1917",
+          "description": "Neutral tones for text, borders, and secondary backgrounds."
+        },
+        "nobel_gold": {
+          "DEFAULT": "#C5A059",
+          "light": "#D4B880",
+          "dark": "#A38240",
+          "description": "Accent color for prestige, citations, and highlights."
+        },
+        "semantic": {
+          "success": "#16A34A",
+          "error": "#EF4444",
+          "info": "#3B82F6",
+          "stabilizer_z": "#3B82F6",
+          "stabilizer_x": "#EF4444"
+        }
+      },
+      "functional": {
+        "background": {
+          "primary": "bg-[#F9F8F4]",
+          "card": "bg-white",
+          "section_alt": "bg-[#F5F4F0]",
+          "section_dark": "bg-stone-900",
+          "overlay": "bg-black/10"
+        },
+        "text": {
+          "primary": "text-stone-900",
+          "secondary": "text-stone-600",
+          "tertiary": "text-stone-400",
+          "accent": "text-nobel-gold",
+          "inverse": "text-white"
+        },
+        "border": {
+          "subtle": "border-stone-200",
+          "interactive": "border-stone-300",
+          "focus": "border-nobel-gold"
+        }
+      }
+    },
+    "typography": {
+      "font_family": {
+        "serif": ["Playfair Display", "serif"],
+        "sans": ["Inter", "sans-serif"],
+        "mono": ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"]
+      },
+      "weights": {
+        "light": 300,
+        "regular": 400,
+        "medium": 500,
+        "bold": 700
+      },
+      "scale": {
+        "display_xl": { "class": "text-5xl md:text-7xl lg:text-9xl", "line_height": "tight", "font": "serif" },
+        "display_lg": { "class": "text-4xl md:text-5xl", "line_height": "tight", "font": "serif" },
+        "h1": { "class": "text-4xl", "line_height": "snug", "font": "serif" },
+        "h2": { "class": "text-3xl", "line_height": "snug", "font": "serif" },
+        "h3": { "class": "text-2xl", "line_height": "normal", "font": "serif" },
+        "body_lg": { "class": "text-lg", "line_height": "relaxed", "font": "sans" },
+        "body": { "class": "text-base", "line_height": "normal", "font": "sans" },
+        "caption": { "class": "text-xs tracking-widest uppercase", "font": "sans", "weight": "bold" }
+      }
+    },
+    "spacing": {
+      "layout": {
+        "container_width": "max-w-[1280px]",
+        "section_padding_y": "py-24",
+        "container_padding_x": "px-6 md:px-12"
+      },
+      "components": {
+        "card_padding": "p-8",
+        "gap_lg": "gap-12 md:gap-16",
+        "gap_md": "gap-6 md:gap-8",
+        "gap_sm": "gap-4"
+      }
+    },
+    "effects": {
+      "shadows": {
+        "sm": "shadow-sm",
+        "md": "shadow-md",
+        "lg": "shadow-lg",
+        "glow": "shadow-[0_0_20px_rgba(197,160,89,0.25)]"
+      },
+      "radius": {
+        "card": "rounded-xl",
+        "button": "rounded-full",
+        "badge": "rounded-full",
+        "sm": "rounded-sm"
+      },
+      "transitions": {
+        "default": "transition-all duration-300 ease-in-out",
+        "fast": "transition-all duration-200 ease-out",
+        "slow": "transition-all duration-500 ease-in-out"
+      }
+    }
+  },
+  "components": {
+    "button": {
+      "primary": {
+        "base": "px-5 py-2 bg-stone-900 text-white rounded-full shadow-sm transition-colors",
+        "hover": "hover:bg-stone-800"
+      },
+      "link": {
+        "base": "text-sm font-medium tracking-wide text-stone-600 uppercase cursor-pointer transition-colors",
+        "hover": "hover:text-nobel-gold"
+      },
+      "icon": {
+        "base": "p-2 text-stone-900 hover:bg-stone-100 rounded-full transition-colors"
+      }
+    },
+    "card": {
+      "author": {
+        "base": "flex flex-col items-center p-8 bg-white rounded-xl border border-stone-200 shadow-sm transition-all duration-300 w-full max-w-xs",
+        "hover": "group hover:shadow-md hover:border-nobel-gold/50",
+        "animation": "animate-fade-in-up"
+      },
+      "diagram": {
+        "base": "bg-white rounded-xl shadow-sm border border-stone-200 p-8 flex flex-col items-center my-8"
+      }
+    },
+    "navigation": {
+      "bar": {
+        "fixed": "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "scrolled": "bg-[#F9F8F4]/90 backdrop-blur-md shadow-sm py-4",
+        "transparent": "bg-transparent py-6"
+      },
+      "logo": {
+        "icon": "w-8 h-8 bg-nobel-gold rounded-full flex items-center justify-center text-white font-serif font-bold text-xl shadow-sm pb-1",
+        "text": "font-serif font-bold text-lg tracking-wide"
+      }
+    },
+    "visualizations": {
+      "quantum_particle": {
+        "description": "3D sphere with MeshDistortMaterial to simulate quantum superposition.",
+        "color": "#4F46E5"
+      },
+      "macroscopic_wave": {
+        "description": "3D Torus with wireframe material to simulate interference patterns.",
+        "color": "#C5A059"
+      },
+      "surface_code": {
+        "stabilizer": "w-10 h-10 flex items-center justify-center text-white text-xs font-bold rounded-sm shadow-sm",
+        "qubit": "w-8 h-8 rounded-full border-2 flex items-center justify-center transition-all duration-200"
+      }
+    }
+  },
+  "tech_stack": {
+    "framework": "React 18+",
+    "styling": "Tailwind CSS",
+    "animation": "Framer Motion",
+    "3d_graphics": "React Three Fiber / Drei",
+    "icons": "Lucide React"
+  }
+}
